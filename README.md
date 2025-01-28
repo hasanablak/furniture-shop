@@ -59,4 +59,12 @@ You can try here: [https://furniture-shop.up.railway.app/](https://furniture-sho
     php artisan serve
     ```
 
+# Admin
+
+- **Admin Login:** `/login`
+- **Admin Email:** `admin@gmail.com`
+- **Admin Password:** `123123`
+
+
+
 Navigate to the specified URL in your browser to access the application.
