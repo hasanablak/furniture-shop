@@ -69,7 +69,7 @@
                                         0,
                                         '.',
                                         ',',
-                                    ) }}đ
+                                    ) }}₺
                                 </span><br>
                                 <strong>Number of products: </strong>{{ $detailed_receipts->count() }}
                             </address>
@@ -160,12 +160,12 @@
                                                     <p class="my-1">Size: {{ $detailed_receipt->detailed_product->size }}
                                                     </p>
                                                 </td>
-                                                <td class="text-danger">{{ number_format($detailed_receipt->unit_price) }}đ
+                                                <td class="text-danger">{{ number_format($detailed_receipt->unit_price) }}₺
                                                 </td>
                                                 <td>{{ $detailed_receipt->quantities }}</td>
                                                 <td>{{ $detailed_receipt->detailed_product->warranty_month }} Months</td>
                                                 <td class="text-success">
-                                                    {{ number_format($detailed_receipt->unit_price * $detailed_receipt->quantities, 0, '.', ',') }}đ
+                                                    {{ number_format($detailed_receipt->unit_price * $detailed_receipt->quantities, 0, '.', ',') }}₺
                                                 <td>
                                                     @can('delete receipt')
                                                         <a href="#" class="btn p-2"

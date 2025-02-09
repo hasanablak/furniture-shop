@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-baseline">
-                                <div class="h2 mb-0 me-2">{{ number_format($total_revenue, 0, '.', ',') }}đ</div>
+                                <div class="h2 mb-0 me-2">{{ number_format($total_revenue, 0, '.', ',') }}₺</div>
                                 <div class="me-auto">
                                     <span class="text-green d-inline-flex align-items-center lh-1">
                                         8% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
@@ -230,7 +230,7 @@
                                             </div>
                                             <div class="text-muted">
 
-                                                {{ number_format($total_revenue, 0, '.', ',') }}đ
+                                                {{ number_format($total_revenue, 0, '.', ',') }}₺
 
                                             </div>
                                         </div>
@@ -355,7 +355,7 @@
                                     </div>
                                     <div class="col">
                                         <div>30-day revenue: <span
-                                                class="text-success">{{ number_format($total_revenue_30day, 0, '.', ',') }}đ</span>
+                                                class="text-success">{{ number_format($total_revenue_30day, 0, '.', ',') }}₺</span>
                                         </div>
 
                                     </div>

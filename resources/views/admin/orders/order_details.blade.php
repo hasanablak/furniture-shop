@@ -73,7 +73,7 @@
                                         0,
                                         '.',
                                         ',',
-                                    ) }}đ
+                                    ) }}₺
                                 </span><br>
                                 <strong>Number of products: </strong>{{ $detailed_orders->count() }}
                             </address>
@@ -186,11 +186,11 @@
                                                             {{ $detailed_order->detailed_product->size }}</p>
                                                     </td>
                                                     <td>{{ $detailed_order->quantities }} x
-                                                        {{ number_format($detailed_order->unit_price) }}đ
+                                                        {{ number_format($detailed_order->unit_price) }}₺
                                                     </td>
                                                     <td>{{ $detailed_order->detailed_product->warranty_month }} Months</td>
                                                     <td class="text-danger">
-                                                        {{ number_format($detailed_order->unit_price * $detailed_order->quantities, 0, '.', ',') }}đ
+                                                        {{ number_format($detailed_order->unit_price * $detailed_order->quantities, 0, '.', ',') }}₺
                                                     <td>
                                                         @if ($order->created_by != null)
                                                             @can('delete order')

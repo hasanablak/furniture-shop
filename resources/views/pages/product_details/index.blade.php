@@ -66,10 +66,10 @@
                                 <div class="product-details-price">
                                     @if ($discount_percentage > 0)
                                         <span class="old-price">
-                                            {{ number_format($detailed_product->original_price, 0, '.', ',') }}đ</span>
+                                            {{ number_format($detailed_product->original_price, 0, '.', ',') }}₺</span>
                                     @endif
                                     <span class="js-unit-price new-price"
-                                        data-unit-price="{{ $detailed_product->original_price - ($detailed_product->original_price * $discount_percentage) / 100 }}">{{ number_format($detailed_product->original_price - ($detailed_product->original_price * $discount_percentage) / 100, 0, '.', ',') }}đ</span>
+                                        data-unit-price="{{ $detailed_product->original_price - ($detailed_product->original_price * $discount_percentage) / 100 }}">{{ number_format($detailed_product->original_price - ($detailed_product->original_price * $discount_percentage) / 100, 0, '.', ',') }}₺</span>
                                 </div>
                             </div>
                         @endforeach
@@ -114,8 +114,8 @@
 
                         </div>
                         <div class="product-details-action-wrap">
-                            <button class="js-add-to-cart add-to-cart disable" disabled>Add to cart</button>
-                            <button class="js-buy-now buy-now disable " disabled>Buy now</button>
+                            <button class="js-add-to-cart add-to-cart disable" disabled>Sepete Ekle</button>
+                            <button class="js-buy-now buy-now disable " disabled>Hemen Sipariş Ver</button>
                         </div>
                         <div class="product-details-meta">
                             <ul>
@@ -144,8 +144,8 @@
     <div class="description-review-area pb-85">
         <div class="container">
             <div class="description-review-topbar nav" data-aos="fade-up" data-aos-delay="200">
-                <a class="active" data-bs-toggle="tab" href="#des-details1"> Description </a>
-                <a data-bs-toggle="tab" href="#des-details2" class=""> Information </a>
+                <a class="active" data-bs-toggle="tab" href="#des-details1"> Ürün Açıklaması </a>
+                <a data-bs-toggle="tab" href="#des-details2" class=""> Ürün Bilgisi </a>
             </div>
             <div class="tab-content">
                 <div id="des-details1" class="tab-pane active">
@@ -160,15 +160,15 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td class="width1">Brands</td>
+                                    <td class="width1">Marka</td>
                                     <td>{{ $product->brand->name }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="width1">Color</td>
+                                    <td class="width1">Renk</td>
                                     <td>{{ $detailed_product->color->name }}</td>
                                 </tr>
                                 <tr>
-                                    <td class="width1">Size</td>
+                                    <td class="width1">Boyutlar</td>
                                     <td>
                                         {{ $detailed_product->size }}
                                     </td>

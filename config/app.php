@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
 return [
-
+	'logo' => env('LOGO', ''),
     /*
     |--------------------------------------------------------------------------
     | Application Name

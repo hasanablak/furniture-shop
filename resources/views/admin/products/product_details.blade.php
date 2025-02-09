@@ -6,10 +6,10 @@
                 <div class="col">
                     <!-- Page pre-title -->
                     <div class="page-pretitle">
-                        Overview
+                        İnceleme
                     </div>
                     <h2 class="page-title">
-                        Product Details
+                        Ürün Detayları
                     </h2>
                 </div>
                 <!-- Page title actions -->
@@ -17,7 +17,7 @@
                     <div class="btn-list">
                         <span class="d-none d-sm-inline">
                             <a href="{{ route('products.index') }}" class="btn">
-                                Back
+                                Geri
                             </a>
                         </span>
                         @can('create product')
@@ -30,7 +30,7 @@
                                     <path d="M12 5l0 14" />
                                     <path d="M5 12l14 0" />
                                 </svg>
-                                Create new instance
+                                Takım Oluştur
                             </a>
                             <a href="{{ route('products.create_detailed_product_ui', $product->product_id) }}"
                                 class="btn btn-primary d-sm-none btn-icon" aria-label="Create new report">
@@ -57,28 +57,28 @@
                             <div class="row row-cards">
                                 <div class="col-md-5">
                                     <div class="mb-3">
-                                        <label for="title" class="form-label">Product Title</label>
+                                        <label for="title" class="form-label">Başlık</label>
                                         <input id="title" name="title" type="text" class="form-control"
                                             value="{{ $product->name }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
-                                        <label for="brand" class="form-label">Brand</label>
+                                        <label for="brand" class="form-label">Marka</label>
                                         <input id="brand" name="brand" type="text" class="form-control"
                                             value="{{ $product->brand->name }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-3">
                                     <div class="mb-3">
-                                        <label for="category" class="form-label">Category</label>
+                                        <label for="category" class="form-label">Kategori</label>
                                         <input id="category" name="category" type="text" class="form-control"
                                             value="{{ $product->category->name }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="badges-list">
-                                        <span class="">Tag: </span>
+                                        <span class="">Etiket: </span>
                                         @foreach ($product->product_tags as $product_tag)
                                             <span class="badge bg-cyan-lt">#{{ $product_tag->tag->name }}</span>
                                         @endforeach
@@ -98,13 +98,13 @@
                                 <table class="js-user-table table table-vcenter card-table">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Color & Size</th>
-                                            <th>Warranty</th>
-                                            <th>Quantities</th>
-                                            <th>Dicounts</th>
-                                            <th>Price</th>
-                                            <th>Action</th>
+                                            <th>İsim</th>
+											<th>Renk & Beden</th>
+											<th>Garanti</th>
+											<th>Miktar</th>
+											<th>İndirimler</th>
+											<th>Fiyat</th>
+											<th>İşlem</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -137,7 +137,7 @@
                                                     <p class="m-0">Color: {{ $detailed_product->color->name }}</p>
                                                     <p class="my-1">Size: {{ $detailed_product->size }}</p>
                                                 </td>
-                                                <td>{{ $detailed_product->warranty_month }} Months</td>
+                                                <td>{{ $detailed_product->warranty_month }} Ay</td>
                                                 <td>{{ $detailed_product->quantities }}</td>
                                                 <td>
                                                     @if (isset($detailed_product->product_discounts->first()->discount))
@@ -146,7 +146,7 @@
                                                                 class="badge bg-cyan-lt">{{ $product_discount->discount->percentage }}%</span>
                                                         @endforeach
                                                     @else
-                                                        <span class="badge bg-cyan-lt">No discount</span>
+                                                        <span class="badge bg-cyan-lt">İndirim yok</span>
                                                     @endif
 
 
@@ -154,11 +154,11 @@
                                                 <td>
                                                     @if ($detailed_product->product_discounts->sum('discount.percentage') > 0)
                                                         <del
-                                                            class="text-muted">{{ number_format($detailed_product->original_price - ($detailed_product->original_price * $detailed_product->product_discounts->sum('discount.percentage')) / 100, 0, '.', ',') }}đ</del>
+                                                            class="text-muted">{{ number_format($detailed_product->original_price - ($detailed_product->original_price * $detailed_product->product_discounts->sum('discount.percentage')) / 100, 0, '.', ',') }}₺</del>
                                                     @endif
 
                                                     <p class="text-danger m-0">
-                                                        {{ number_format($detailed_product->original_price, 0, '.', ',') }}đ
+                                                        {{ number_format($detailed_product->original_price, 0, '.', ',') }}₺
                                                     </p>
                                                 </td>
 

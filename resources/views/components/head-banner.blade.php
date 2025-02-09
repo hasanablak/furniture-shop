@@ -3,7 +3,7 @@
         <div class="breadcrumb-content text-center">
             <h2 data-aos="fade-up" data-aos-delay="100">{{ $page }}</h2>
             <ul data-aos="fade-up" data-aos-delay="150">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Anasayfa</a></li>
                 <li><i class="ti-angle-right"></i></li>
                 <li>{{ $page }}</li>
             </ul>

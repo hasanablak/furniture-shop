@@ -150,7 +150,7 @@
                                                 </td>
 
                                                 <td class="text-danger">
-                                                    {{ number_format($product->detailed_products->avg('original_price'), 0, '.', ',') }}đ
+                                                    {{ number_format($product->detailed_products->avg('original_price'), 0, '.', ',') }}₺
                                                 </td>
                                                 <td>{{ $product->detailed_products->sum('quantities') }}</td>
 

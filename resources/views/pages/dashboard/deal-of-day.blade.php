@@ -3,7 +3,7 @@
         <div class="section-border section-border-margin-1">
             <div class="section-title-timer-wrap bg-white">
                 <div class="section-title-1">
-                    <h2>Deal Of The Day</h2>
+                    <h2>Fırsat Ürünler</h2>
                 </div>
             </div>
         </div>
@@ -33,9 +33,9 @@
                                 <h3><a href="/products/{{ $product->product_id }}">{{ $product->name }}</a></h3>
                                 <div class="product-price">
                                     <span
-                                        class="old-price">{{ number_format($product->old_price, 0, '.', ',') }}đ</span>
+                                        class="old-price">{{ number_format($product->old_price, 0, '.', ',') }}₺</span>
                                     <span
-                                        class="new-price">{{ number_format($product->new_price, 0, '.', ',') }}đ</span>
+                                        class="new-price">{{ number_format($product->new_price, 0, '.', ',') }}₺</span>
                                 </div>
                             </div>
                         </div>

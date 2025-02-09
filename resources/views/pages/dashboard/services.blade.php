@@ -7,8 +7,8 @@
                         <img src="{{ asset('images/icon-img/car.png') }}" alt="">
                     </div>
                     <div class="service-content">
-                        <h3>Free Shipping</h3>
-                        <p>Free shipping on all order</p>
+                        <h3>Ücretsiz Kargo</h3>
+                        <p>Tüm siparişlerde ücretsiz kargo</p>
                     </div>
                 </div>
             </div>
@@ -18,8 +18,8 @@
                         <img src="{{ asset('images/icon-img/time.png') }}" alt="">
                     </div>
                     <div class="service-content">
-                        <h3>Support 24/7</h3>
-                        <p>Support 24 hours a day</p>
+                        <h3>7/24 Destek</h3>
+                        <p>Gün boyu 24 saat destek</p>
                     </div>
                 </div>
             </div>
@@ -29,8 +29,8 @@
                         <img src="{{ asset('images/icon-img/dollar.png') }}" alt="">
                     </div>
                     <div class="service-content">
-                        <h3>Money Return</h3>
-                        <p>Back Guarantee Under </p>
+                        <h3>Para İade Garantisi</h3>
+                        <p>Garantili geri ödeme</p>
                     </div>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                         <img src="{{ asset('images/icon-img/discount.png') }}" alt="">
                     </div>
                     <div class="service-content">
-                        <h3>Order Discount</h3>
-                        <p>Onevery order over $150</p>
+                        <h3>Sipariş İndirimi</h3>
+                        <p>15.000₺ üzeri her siparişte indirim</p>
                     </div>
                 </div>
             </div>

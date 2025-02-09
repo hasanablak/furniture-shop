@@ -25,7 +25,7 @@
                     <div class="separate"></div>
                     <div class="total-price-wrapper">
                         <p class="title">Order Total:</p>
-                        <p class="js-cart-order-total-price total-price">0đ</p>
+                        <p class="js-cart-order-total-price total-price">0₺</p>
                     </div>
                     <div class="separate"></div>
                     <button class="js-cart-checkout-btn checkout disable">Checkout</button>

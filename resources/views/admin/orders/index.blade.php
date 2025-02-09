@@ -135,7 +135,7 @@
                                                     <span>{{ Carbon::parse($order->created_at)->diffForHumans() }}</span>
                                                 </td>
                                                 <td class="text-danger">
-                                                    {{ number_format($order->total_price, 0, '.', ',') }}đ
+                                                    {{ number_format($order->total_price, 0, '.', ',') }}₺
                                                 </td>
                                                 <td>
                                                     @switch($order->is_paid)

@@ -10,29 +10,29 @@
                         <div class="shop-topbar-left">
                             <div class="showing-item">
                                 <span>
-                                    {{ 'Showing ' . $products->currentPage() * 9 - 8 . ' - ' . $products->currentPage() * 9 . ' of ' . $products->total() . ' results' }}
-                                </span>
+									{{ 'Gösterilen: ' . ($products->currentPage() * 9 - 8) . ' - ' . min($products->currentPage() * 9, $products->total()) . ' / ' . $products->total() . ' sonuç' }}
+								</span>
                             </div>
                         </div>
                         <div class="shop-topbar-right">
                             <div class="shop-sorting-area">
                                 <select id="sort-product" class="nice-select nice-select-style-1">
-                                    <option value="default"
-                                        @if ($sorted_by == 'default') @selected(true) @endif>Default
-                                        Sorting</option>
-                                    <option value="price_asc"
-                                        @if ($sorted_by == 'price_asc') @selected(true) @endif>Sort by price
-                                        ascending</option>
-                                    <option value="price_desc"
-                                        @if ($sorted_by == 'price_desc') @selected(true) @endif>Sort by price
-                                        descending</option>
-                                    <option value="latest"
-                                        @if ($sorted_by == 'latest') @selected(true) @endif>Sort
-                                        by latest</option>
-                                    <option value="oldest"
-                                        @if ($sorted_by == 'oldest') @selected(true) @endif>Sort
-                                        by oldest</option>
-                                </select>
+									<option value="default" @if ($sorted_by == 'default') @selected(true) @endif>
+										Varsayılan Sıralama
+									</option>
+									<option value="price_asc" @if ($sorted_by == 'price_asc') @selected(true) @endif>
+										Fiyata göre artan
+									</option>
+									<option value="price_desc" @if ($sorted_by == 'price_desc') @selected(true) @endif>
+										Fiyata göre azalan
+									</option>
+									<option value="latest" @if ($sorted_by == 'latest') @selected(true) @endif>
+										En yeniye göre sırala
+									</option>
+									<option value="oldest" @if ($sorted_by == 'oldest') @selected(true) @endif>
+										En eskiye göre sırala
+									</option>
+								</select>
                             </div>
                             <div class="shop-view-mode nav">
                                 <a class="active" href="#shop-1" data-bs-toggle="tab"><i class=" ti-layout-grid3 "></i> </a>
@@ -61,7 +61,7 @@
                                                     @if ($product->total_quantities == 0)
                                                         <div
                                                             class="custom-product-badge product-badge badge-top badge-left badge-pink">
-                                                            <span>Sold out</span>
+                                                            <span>Stokda Yok</span>
                                                         </div>
                                                     @endif
                                                     <div class="product-action-wrap">
@@ -77,8 +77,7 @@
                                                         <div class="product-action-2-wrap ">
                                                             <button data-sku="{{ $detailed_product->sku }}"
                                                                 class="js-add-to-cart-shop product-action-btn-2"
-                                                                title="Add To Cart"><i class="pe-7s-cart"></i> Add to
-                                                                cart</button>
+                                                                title="Add To Cart"><i class="pe-7s-cart"></i> Sepete Ekle</button>
                                                         </div>
                                                     @endif
 
@@ -89,11 +88,11 @@
                                                     <div class="product-price">
                                                         @if ($detailed_product->total_discount_percentage > 0)
                                                             <span class="old-price">
-                                                                {{ number_format($detailed_product->original_price, 0, '.', ',') }}đ
+                                                                {{ number_format($detailed_product->original_price, 0, '.', ',') }}₺
                                                             </span>
                                                         @endif
                                                         <span class="new-price">
-                                                            {{ number_format($detailed_product->original_price - ($detailed_product->original_price * $detailed_product->total_discount_percentage) / 100, 0, '.', ',') }}đ
+                                                            {{ number_format($detailed_product->original_price - ($detailed_product->original_price * $detailed_product->total_discount_percentage) / 100, 0, '.', ',') }}₺
                                                         </span>
                                                     </div>
                                                 </div>
@@ -117,7 +116,7 @@
                         <div class="sidebar-widget mb-40">
                             <div class="search-wrap-2">
                                 <form class="search-2-form" action="#">
-                                    <input id="search-input" placeholder="Search products..." type="text"
+                                    <input id="search-input" placeholder="Mobilya, Sandalye, Yatak Odası..." type="text"
                                         value="{{ $search }}">
                                     <button class="button-search"><i class=" ti-search "></i></button>
                                 </form>
@@ -127,12 +126,12 @@
 
                         <div class="sidebar-widget sidebar-widget-border mb-40 pb-35">
                             <div class="sidebar-widget-title mb-25">
-                                <h3>Product Categories</h3>
+                                <h3>Kategoriler</h3>
                             </div>
                             <div class="sidebar-list-style">
                                 <div class="categories-select">
                                     @if ($selected_category == 'all' || $selected_category == null)
-                                        <div class="category-selected" data-category-id="all">All</div>
+                                        <div class="category-selected" data-category-id="all">Hepsi</div>
                                     @else
                                         @foreach ($categories as $category)
                                             @if ($selected_category == $category->category_id)
@@ -159,16 +158,16 @@
 
                         <div class="sidebar-widget sidebar-widget-border mb-40 pb-35">
                             <div class="sidebar-widget-title mb-30">
-                                <h3>Filter By Price</h3>
+                                <h3>Fiyata Göre Filtrele</h3>
                             </div>
                             <div class="price-filter">
                                 <div class="price-input">
                                     <div class="field">
-                                        <input type="text" class="input-min" value="0đ" data-value="0" readonly>
+                                        <input type="text" class="input-min" value="0₺" data-value="0" readonly>
                                     </div>
                                     <div class="separator">-</div>
                                     <div class="field">
-                                        <input type="text" class="input-max" value="60,000,000đ" data-value="60000000"
+                                        <input type="text" class="input-max" value="60,000,000₺" data-value="60000000"
                                             readonly>
                                     </div>
                                 </div>
@@ -186,7 +185,7 @@
 
                         <div class="sidebar-widget sidebar-widget-border mb-40 pb-35">
                             <div class="sidebar-widget-title mb-25">
-                                <h3>Choose Colour</h3>
+                                <h3>Renk Tercihi</h3>
                             </div>
                             <div class="sidebar-widget-color sidebar-list-style">
                                 <div class="row g-2">
@@ -207,7 +206,7 @@
                         </div>
                         <div class="sidebar-widget">
                             <div class="sidebar-widget-title mb-25">
-                                <h3>Tags</h3>
+                                <h3>Etkiket</h3>
                             </div>
                             <div class="sidebar-widget-tag">
                                 <div class="row g-2">

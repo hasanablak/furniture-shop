@@ -115,7 +115,7 @@
                                                     {{ Carbon::parse($receipt->created_at)->diffForHumans() }}
                                                 </td>
                                                 <td class="text-danger">
-                                                    {{ number_format($receipt->total_price, 0, '.', ',') }}đ
+                                                    {{ number_format($receipt->total_price, 0, '.', ',') }}₺
 
                                                 <td class="text-muted">
                                                     <div>

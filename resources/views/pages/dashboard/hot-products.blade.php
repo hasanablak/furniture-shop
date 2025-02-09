@@ -2,11 +2,11 @@
     <div class="container">
         <div class="section-title-tab-wrap mb-75">
             <div class="section-title-2">
-                <h2>Hot Products</h2>
+                <h2>Trend</h2>
             </div>
             <div class="tab-style-1 nav">
-                <a class="active" href="#pro-1" data-bs-toggle="tab">Best Sellers</a>
-                <a href="#pro-2" data-bs-toggle="tab" class="">Latest Products</a>
+                <a class="active" href="#pro-1" data-bs-toggle="tab">En İyi Satanlar</a>
+                <a href="#pro-2" data-bs-toggle="tab" class="">Son Ürünler</a>
             </div>
         </div>
         <div class="tab-content jump">
@@ -24,7 +24,7 @@
                                     </div>
                                     @if ($product->total_quantities == 0)
                                         <div class="custom-product-badge product-badge badge-top badge-left badge-pink">
-                                            <span>Sold out</span>
+                                            <span>Satıldı</span>
                                         </div>
                                     @endif
                                     <div class="product-action-wrap">
@@ -40,9 +40,9 @@
                                     <h3><a href="/products/{{ $product->product_id }}">{{ $product->name }}</a></h3>
                                     <div class="product-price">
                                         <span
-                                            class="old-price">{{ number_format($product->detailed_product->original_price, 0, '.', ',') }}đ</span>
+                                            class="old-price">{{ number_format($product->detailed_product->original_price, 0, '.', ',') }}₺</span>
                                         <span
-                                            class="new-price">{{ number_format($product->detailed_product->original_price - ($product->detailed_product->original_price * $product->detailed_product->total_discount_percentage) / 100, 0, '.', ',') }}đ</span>
+                                            class="new-price">{{ number_format($product->detailed_product->original_price - ($product->detailed_product->original_price * $product->detailed_product->total_discount_percentage) / 100, 0, '.', ',') }}₺</span>
                                     </div>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                                     </div>
                                     @if ($product->total_quantities == 0)
                                         <div class="custom-product-badge product-badge badge-top badge-left badge-pink">
-                                            <span>Sold out</span>
+                                            <span>Satıldı</span>
                                         </div>
                                     @endif
                                     <div class="product-action-wrap">
@@ -80,9 +80,9 @@
                                     <h3><a href="/products/{{ $product->product_id }}">{{ $product->name }}</a></h3>
                                     <div class="product-price">
                                         <span
-                                            class="old-price">{{ number_format($product->detailed_product->original_price, 0, '.', ',') }}đ</span>
+                                            class="old-price">{{ number_format($product->detailed_product->original_price, 0, '.', ',') }}₺</span>
                                         <span
-                                            class="new-price">{{ number_format($product->detailed_product->original_price - ($product->detailed_product->original_price * $product->detailed_product->total_discount_percentage) / 100, 0, '.', ',') }}đ</span>
+                                            class="new-price">{{ number_format($product->detailed_product->original_price - ($product->detailed_product->original_price * $product->detailed_product->total_discount_percentage) / 100, 0, '.', ',') }}₺</span>
                                     </div>
                                 </div>
                             </div>

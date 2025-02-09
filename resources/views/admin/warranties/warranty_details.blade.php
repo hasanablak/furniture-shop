@@ -70,7 +70,7 @@
                                         0,
                                         '.',
                                         ',',
-                                    ) }}đ
+                                    ) }}₺
                                 </span><br>
                                 <strong>Number of products: </strong>{{ $detailed_orders->count() }}
                             </address>

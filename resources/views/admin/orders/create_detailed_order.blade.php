@@ -86,11 +86,11 @@
                                                             {{ $detailed_product->quantities }}</td>
                                                         <td>
                                                             @if ($discount_percentage > 0)
-                                                                <del>{{ number_format($detailed_product->original_price, 0, '.', ',') }}đ</del>
+                                                                <del>{{ number_format($detailed_product->original_price, 0, '.', ',') }}₺</del>
                                                             @endif
                                                             <p class="js-unit-price text-danger m-0"
                                                                 data-unit-price="{{ $unit_price }}">
-                                                                {{ number_format($unit_price, 0, '.', ',') }}đ
+                                                                {{ number_format($unit_price, 0, '.', ',') }}₺
                                                             </p>
 
                                                         </td>

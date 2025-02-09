@@ -172,7 +172,7 @@
                                                     </td>
                                                     <td>{{ $detailed_product->quantities }}</td>
                                                     <td class="text-danger">
-                                                        {{ number_format($detailed_product->original_price, 0, '.', ',') }}đ
+                                                        {{ number_format($detailed_product->original_price, 0, '.', ',') }}₺
                                                     </td>
                                                     <td>
                                                         @can('delete discount')

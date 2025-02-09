@@ -78,7 +78,7 @@
                                                 href="/products/{{ $detailed_order->detailed_product->product_id }}">{{ $detailed_order->detailed_product->name }}</a>
 
                                         </p>
-                                        <p>{{ number_format($detailed_order->unit_price * $detailed_order->quantities, 0, '.', ',') }}đ
+                                        <p>{{ number_format($detailed_order->unit_price * $detailed_order->quantities, 0, '.', ',') }}₺
                                         </p>
                                     </div>
                                 @endforeach
@@ -100,7 +100,7 @@
                                 0,
                                 '.',
                                 ',',
-                            ) }}đ</span>
+                            ) }}₺</span>
                         </div>
                     </div>
                 @else

@@ -310,10 +310,11 @@ class PagesController extends Controller
         $product = Product::with(['category', 'brand', 'product_tags.tag', 'detailed_products' => function ($query) {
             $query->where('is_deleted', 0);
         }])
-            ->where('is_deleted', false)->where('product_id', $product_id)->first();
+            ->where('is_deleted', false)->where('product_id', $product_id)
+			->first();
         if ($product) {
             $data = [
-                'page' => 'Product Details',
+                'page' => $product->name,
                 'product' => $product,
             ];
             return view('pages.product_details.index', $data);
